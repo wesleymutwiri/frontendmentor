@@ -1,0 +1,101 @@
+ :root {
+     --orange: hsl(31, 77%, 52%);
+     --cyan: hsl(184, 100%, 22%);
+     --dark-cyan: hsl(179, 100%, 13%);
+ }
+
+ .attribution {
+     font-size: 11px;
+     text-align: center;
+ }
+
+ body {
+     font-size: 15px;
+ }
+
+ .attribution a {
+     color: hsl(228, 45%, 44%);
+ }
+
+ .container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 2rem;
+     max-width: 1440px;
+     margin: 0 auto;
+ }
+
+ .card {
+     width: 220px;
+     max-width: 220px;
+     min-width: 220px;
+     padding: 2rem;
+     display: flex;
+     height: 400px;
+     flex-direction: column;
+     color: hsla(0, 0%, 100%, 0.75);
+     justify-content: space-between;
+     font-family: 'Lexend Deca', sans-serif;
+     line-height: 1.5;
+     
+ }
+
+.card img {
+    width: 64px;
+    height: 40px;
+}
+
+ h3 {
+     font-family: 'Big Shoulders Display', cursive;
+     font-size: 2rem;
+     text-transform: uppercase;
+     color: hsl(0, 0%, 95%);
+ }
+
+ .card button {
+     outline: none;
+     border: none;
+     background: hsl(0, 0%, 95%);
+     border-radius: 1.8rem;
+     padding: 1rem 2rem;
+     width: max-content;
+     text-transform: capitalize;
+ }
+
+ .orange button{
+     color: var(--orange);
+ }
+
+ .cyan button {
+     color: var(--cyan);
+ }
+
+ .dark-cyan button {
+     color: var(--dark-cyan);
+ }
+
+ .orange {
+     background: var(--orange);
+ }
+
+ .cyan {
+     background: var(--cyan);
+ }
+
+ .dark-cyan {
+     background: var(--dark-cyan);
+ }
+
+ button:hover {
+    background: none;
+    border: 1px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+ }
+
+ @media screen and (max-width: 375px) {
+     .container {
+         flex-wrap: wrap;
+     }
+ }
