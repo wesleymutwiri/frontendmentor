@@ -85,7 +85,7 @@ h1 {
 
 .header-content p {
   color: hsla(0, 0%, 100%, 0.75);
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-size: 1rem;
   max-width: 400px;
 }
@@ -104,4 +104,44 @@ h1 {
 
 h2 {
   color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 1440px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .card-text {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 930px) {
+  .card {
+    flex-direction: column-reverse;
+    height: max-content;
+    width: 100%;
+    align-items: center;
+  }
+  .card-text,
+  .card-image {
+    width: 100%;
+  }
+  img {
+    display: none;
+  }
+  .card-image {
+    position: relative;
+  }
+  .card-image::before {
+    content: "";
+    top: 0;
+    left: 0;
+    background: url("/images/image-header-mobile.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 }
