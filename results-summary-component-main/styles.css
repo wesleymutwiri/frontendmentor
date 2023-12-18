@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/static/HankenGrotesk-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/static/HankenGrotesk-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+body {
+    font-family: "Hanken Grotesk";
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 90vh;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 3px 3px rgba(0 0 0 / 0.1);
+    border-radius: 1.8rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.8rem;
+    padding: 1.5rem 3rem;
+}
+
+.blue-background {
+    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 80%);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    max-width: 230px;
+}
+
+.white-background {
+    border-radius: 0 1.8rem 1.8rem 0;
+}
+
+.transparent-white {
+    color: hsla(0, 0%, 100%, 0.7);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.dark-circle {
+    border-radius: 50%;
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1) 60%, hsla(241, 72%, 46%, 0) 100%);
+    width: 180px;
+    height: 180px;
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.large-number {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.small-text {
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.4);
+    display: block;
+    font-weight: 500;
+}
+
+.white-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.small {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.tile {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem 0;
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 230px;
+    padding: 0 1rem;
+}
+
+.tile-name {
+    display: flex;
+}
+
+.tile-description {
+    color: hsla(224, 30%, 27%, 0.6);
+    font-weight: 700;
+}
+
+.tile-name img {
+    margin-right: .5rem;
+}
+
+.tile-name p {
+    font-weight: 700;
+}
+
+.light-red {
+    background: hsla(0, 100%, 67%, .1);
+    color: hsl(0, 100%, 67%);
+}
+
+.light-yellow {
+    background: hsla(39, 100%, 56%, .1);
+    color: hsl(39, 100%, 56%);
+}
+
+.light-green {
+    background: hsla(166, 100%, 37%, .1);
+    color: hsl(166, 100%, 37%);
+}
+
+.light-violet {
+    background: hsla(234, 85%, 45%, .1);
+    color: hsl(234, 85%, 45%);
+}
+
+.bold {
+    color: hsla(0, 0%, 0%, 0.8);
+    margin-right: 0.1rem;
+}
+
+.rounded-button {
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background: hsl(224, 30%, 27%);
+    color: hsl(221, 100%, 96%);
+    font-weight: 700;
+    border-radius: 2rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+
+    html,
+    body {
+        margin: 0;
+    }
+
+    .card {
+        flex-direction: column;
+        min-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .blue-background {
+        max-width: max-content;
+        border-radius: 0;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        align-self: center;
+    }
+
+    .tile {
+        min-width: 100%;
+    }
+
+    .attribution {
+        margin-top: 2rem;
+    }
+}
