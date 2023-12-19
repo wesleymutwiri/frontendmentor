@@ -38,13 +38,13 @@
      justify-content: space-between;
      font-family: 'Lexend Deca', sans-serif;
      line-height: 1.5;
-     
+
  }
 
-.card img {
-    width: 64px;
-    height: 40px;
-}
+ .card img {
+     width: 64px;
+     height: 40px;
+ }
 
  h3 {
      font-family: 'Big Shoulders Display', cursive;
@@ -63,7 +63,7 @@
      text-transform: capitalize;
  }
 
- .orange button{
+ .orange button {
      color: var(--orange);
  }
 
@@ -88,13 +88,13 @@
  }
 
  button:hover {
-    background: none;
-    border: 1px solid hsl(0, 0%, 95%);
-    color: hsl(0, 0%, 95%);
-    cursor: pointer;
+     background: none;
+     border: 1px solid hsl(0, 0%, 95%);
+     color: hsl(0, 0%, 95%);
+     cursor: pointer;
  }
 
- @media screen and (max-width: 375px) {
+ @media screen and (max-width: 890px) {
      .container {
          flex-wrap: wrap;
      }
