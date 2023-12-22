@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+}
+
+.card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: hsl(216, 50%, 16%);
+    border-radius: 1rem;
+    width: 350px;
+}
+
+.card-image {
+    background: url("images/image-equilibrium.jpg") no-repeat;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 1.5rem;
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+.card-image:hover::after {
+    content: url("images/icon-view.svg");
+    background: hsla(178, 100%, 50%, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.highlighted-name {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.description {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.price-nft {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.price-nft::before {
+    content: url("images/icon-ethereum.svg");
+    margin-right: 0.3rem;
+    vertical-align: -10%;
+}
+
+.days {
+    color: hsl(215, 51%, 70%);
+}
+
+.days::before {
+    content: url("images/icon-clock.svg");
+    margin-right: 0.2rem;
+    vertical-align: -10%;
+}
+
+.nft-creator {
+    color: hsl(215, 51%, 70%);
+}
+
+a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+a:hover,
+.highlighted-name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.bordered-row {
+    border-top: 1px solid hsl(215, 32%, 27%);
+    padding-top: 1rem;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+    background: url("images/image-avatar.png");
+    background-size: cover;
+    margin-right: 1rem;
+}
