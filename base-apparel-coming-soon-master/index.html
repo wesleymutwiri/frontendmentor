@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <main class="container">
+    <div class="content">
+      <div class="navigation-logo">
+        <img src="images/logo.svg" alt="" class="logo">
+      </div>
+      <div class="row-center">
+
+        <h1 class="title">
+          <span class="red-title">
+            We're <br>
+          </span>
+          coming <br> soon
+        </h1>
+        <p class="description">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <form class="form-placeholder" action="">
+          <span class="input-spanned">
+            <input type="email" name="email" id="email" placeholder="Email Address" required
+              oninput="this.setCustomValidity('')">
+          </span>
+          <button class="submit-button" type="submit"><img src="images/icon-arrow.svg" alt=""></button>
+        </form>
+        <div id="hidden-error-message">Please provide a valid email</div>
+      </div>
+      <footer>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/wesleymutwiri/frontendmentor">Wesley Mutwiri</a>.
+        </p>
+      </footer>
+    </div>
+
+    <div class="image"></div>
+  </main>
+
+</body>
+
+</html>
