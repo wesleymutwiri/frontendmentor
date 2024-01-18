@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Work Sans";
+    src: url("assets/fonts/static/WorkSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("assets/fonts/static/WorkSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("assets/fonts/static/WorkSans-Bold.ttf");
+    font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: "Work Sans";
+    background: url("assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: hsl(275, 100%, 97%);
+    background-size: contain;
+}
+
+
+.card {
+    width: 600px;
+    background: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.card-header {
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.card-header::before {
+    content: url("assets/images/icon-star.svg");
+    margin-right: 1.5rem;
+}
+
+details {
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+}
+
+summary {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    /* transition: content .5s; */
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+details p {
+    color: hsl(292, 16%, 49%);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-align: left;
+
+}
+
+details[open] summary img {
+    content: url("assets/images/icon-minus.svg");
+}
