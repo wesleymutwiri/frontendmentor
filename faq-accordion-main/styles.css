@@ -38,6 +38,7 @@
     background-repeat: no-repeat;
     background-color: hsl(275, 100%, 97%);
     background-size: contain;
+    color: hsl(292, 42%, 14%);
 }
 
 
@@ -47,6 +48,8 @@
     padding: 2rem;
     border-radius: 1rem;
     z-index: 1;
+    padding-bottom: 0;
+    margin-bottom: 2rem;
 }
 
 .card-header {
@@ -81,6 +84,7 @@ summary {
 
 summary:hover {
     cursor: pointer;
+    color: #ad28eb;
 }
 
 details p {
@@ -93,4 +97,34 @@ details p {
 
 details[open] summary img {
     content: url("assets/images/icon-minus.svg");
+}
+
+details:last-of-type {
+    border-bottom: none;
+    margin-bottom: none;
+}
+
+@media screen and (max-width: 640px) {
+    .card {
+        width: 350px;
+        padding: 2rem;
+    }
+
+    .container {
+        background: url("assets/images/background-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: hsl(275, 100%, 97%);
+    }
+
+    .card-header {
+        font-size: 2.8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-header::before {
+        width: 40px;
+        height: 40px;
+    }
 }
