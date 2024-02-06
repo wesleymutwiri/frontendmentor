@@ -129,6 +129,7 @@ footer {
 
 .row-header {
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .footer-link {
@@ -167,7 +168,7 @@ footer {
     z-index: 1;
     border-radius: 0.5rem;
     border: none;
-    box-shadow: 0px 0px 2px 2px hsl(0, 0%, 85%);
+    box-shadow: 0px 0px 8px hsl(0, 0%, 85%);
 }
 
 .iconed-text {
@@ -204,4 +205,105 @@ footer {
 
 .row-description {
     color: hsl(208, 11%, 55%);
+}
+
+@media screen and (max-width: 1200px) {
+    .main-heading {
+        background: url("images/bg-hero-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .heading-content {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-right: 0;
+    }
+
+    .mockup {
+        width: 100%;
+    }
+
+    .row {
+        justify-content: center;
+        height: 100%;
+        border: none;
+        box-shadow: 0px 0px 8px #d2d2d2;
+    }
+
+    .row-illustration {
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+
+    .row:nth-of-type(2) {
+        flex-direction: column;
+    }
+
+    .footer-floating-box {
+        transform: translateX(50%);
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer {
+        padding: 2rem;
+    }
+
+    .row-footer {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: flex-start;
+    }
+
+    .footer-floating-box {
+        transform: translateX(20%);
+    }
+
+    .dark-description {
+        font-size: 1rem;
+    }
+
+    .attribution,
+    .copyright {
+        float: unset;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .col-footer {
+        margin: 1rem 0;
+    }
+
+    .col-footer:last-child {
+        justify-self: center;
+    }
+
+    .col-footer:nth-child(2),
+    .col-footer:nth-child(3) {
+        margin: 0;
+    }
+
+    .col-footer:nth-child(2) .footer-link,
+    .col-footer:nth-child(3) .footer-link {
+        color: hsl(0, 0%, 85%);
+        font-weight: 400;
+    }
+
+    .main-content {
+        padding: 2rem;
+    }
+
+    .row {
+        padding: 2rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
 }
