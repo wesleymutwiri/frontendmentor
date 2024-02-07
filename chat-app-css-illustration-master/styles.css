@@ -1,0 +1,275 @@
+/* CSS reset to prevent unexpected additional padding and margin */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+/* Styles that create the shapes in the container as well as the overall
+web page styling */
+
+.container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14rem;
+    background: hsla(270, 20%, 96%, 0.301);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    height: 90vh;
+    width: 600px;
+    top: 0;
+    left: -100px;
+    border-radius: 0 0 50% 50% / 0 0 40% 40%;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    background: hsla(270, 20%, 96%, 0.582);
+    height: 90vh;
+    width: 600px;
+    bottom: 0;
+    right: -100px;
+    z-index: -1;
+    border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+}
+
+.website-explanation {
+    width: 450px;
+}
+
+.main-heading {
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.chat-description {
+    color: hsl(270, 7%, 64%);
+    line-height: 2;
+}
+
+/* Overall phone layout styles  */
+
+.phone-layout {
+    width: 350px;
+    height: 650px;
+    background: hsl(0, 0%, 100%);
+    padding: 0.6rem;
+    z-index: 1;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 24px 0px hsl(270, 7%, 64%);
+}
+
+/* styles for content inside the phone like layout  */
+
+.phone-content {
+    background: hsl(270, 20%, 96%);
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+/* Chat header styles */
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    position: relative;
+    color: hsl(0, 0%, 100%);
+}
+
+.chat-header::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: -10px;
+    left: 0;
+    transform: translateX(40%);
+    background: hsl(0, 0%, 100%);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Chat avatar styles */
+
+.chat-avatar {
+    height: 30px;
+    width: 30px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+
+.more-options-icon {
+    margin-left: auto;
+}
+
+.chat-status {
+    font-size: 0.7rem;
+    color: hsl(276, 100%, 81%);
+    margin-top: 0.4rem;
+}
+
+/* styles for the chat content  */
+.chat-content {
+    padding: 0.6rem;
+}
+
+/* styles for the general chat bubble  */
+
+.chat-bubble {
+    font-size: 0.8rem;
+    max-width: 200px;
+    min-width: min-content;
+    border-radius: 0.7rem;
+    padding: 0.6rem 0.7rem;
+    margin: 0.3rem 0;
+    font-weight: 300;
+}
+
+/* styles for the chat on the left side  */
+
+.chat-on-left-side {
+    color: hsl(276, 55%, 52%);
+    background: hsla(276, 55%, 52%, 0.25);
+    float: left;
+    border-bottom-left-radius: 0.2rem;
+}
+
+/* styles for the chat on the right side  */
+
+.chat-on-right-side {
+    color: hsl(271, 15%, 43%);
+    background: hsl(0, 0%, 100%);
+    float: right;
+    border-bottom-right-radius: 0.2rem;
+}
+
+
+/* styles for the images on the chat  */
+
+.chat-sent-images {
+    display: flex;
+    float: right;
+    gap: 10px;
+    margin: 0.3rem;
+}
+
+.chat-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+/* styles for the quotations  */
+.chat-quotation {
+    float: left;
+    background: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+    width: 240px;
+    border-radius: 0.7rem;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+.icon {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px dotted hsl(0, 0%, 100%);
+    margin-right: 0.5rem;
+}
+
+.quotation-price {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    font-weight: 700;
+}
+
+.quotation-walk {
+    font-size: 0.7rem;
+}
+
+/* styles for the input message box */
+
+#message-box {
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+#message-box::placeholder {
+    color: hsl(270, 7%, 64%);
+}
+
+/* styles for the floating button on the input */
+.floating-input-box {
+    float: left;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.floating-input-box::after {
+    content: ">";
+    height: 30px;
+    width: 30px;
+    background: hsl(271, 36%, 24%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* styles for the attribution  */
+.attribution {
+    position: fixed;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    color: hsl(271, 36%, 24%);
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    background: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
