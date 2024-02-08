@@ -1,16 +1,15 @@
 /* CSS reset to prevent unexpected additional padding and margin */
-
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
 main {
     height: 100vh;
-    font-family: 'Rubik', sans-serif;
     font-size: 16px;
     overflow: hidden;
 }
@@ -24,6 +23,7 @@ web page styling */
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 14rem;
     background: hsla(270, 20%, 96%, 0.301);
 }
@@ -70,7 +70,7 @@ web page styling */
 /* Overall phone layout styles  */
 
 .phone-layout {
-    width: 350px;
+    width: 330px;
     height: 650px;
     background: hsl(0, 0%, 100%);
     padding: 0.6rem;
@@ -272,4 +272,35 @@ a {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        gap: 4rem;
+        /* height: 100%; */
+        padding: 4rem 0;
+    }
+
+    .container::before,
+    .container::after {
+        height: 60vh;
+        width: 50vw;
+    }
+
+    .website-explanation {
+        z-index: 1;
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+
+    main {
+        overflow-y: scroll;
+    }
+
+    .attribution {
+        position: unset;
+        margin: 4rem auto 2rem;
+        transform: unset;
+        text-align: center;
+    }
 }
