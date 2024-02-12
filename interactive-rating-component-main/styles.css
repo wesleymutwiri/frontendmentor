@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    background: hsl(216, 12%, 8%);
+    color: hsl(217, 12%, 63%);
+}
+
+.text-white {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.7rem;
+}
+
+.star-icon {
+    height: 40px;
+    width: 40px;
+    background: hsla(216, 12%, 54%, 0.103);
+    border-radius: 50%;
+    padding: 0.8rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: hsl(213, 19%, 18%);
+    width: 400px;
+    height: 400px;
+    padding: 2rem;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+.card-content {
+    margin-top: -1.2rem;
+    line-height: 1.5;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 30px;
+}
+
+.attribution a {
+    color: hsl(25, 97%, 53%);
+    text-decoration: none;
+}
+
+.orange-button {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    width: 100%;
+    margin-top: 1.8rem;
+}
+
+
+.orange-button:hover {
+    color: hsl(25, 97%, 53%);
+    background: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.circled-icon {
+    border-radius: 100%;
+    background: hsla(216, 12%, 54%, 0.13);
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+
+}
+
+.circled-icon:hover {
+    cursor: pointer;
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+.circled-icon:has(+.circled-icon:hover) {
+    color: hsl(0, 0%, 100%);
+    background: hsl(217, 12%, 63%);
+}
+
+.circled-icon:has(input[type="radio"]:checked) {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+/* input[type="radio"]:checked~input[type="radio"] .circled-icon {
+    background: hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+    border: 3px solid red;
+} */
+
+
+.rating-component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card.thank-you-state {
+    display: none;
+    text-align: center;
+    align-items: center;
+}
+
+.thank-you-image {
+    height: min-content;
+    width: min-content;
+}
+
+.rating-state {
+    /* display: none; */
+}
+
+.bordered-rating-selected {
+    background: hsla(216, 12%, 54%, 0.13);
+    color: hsl(25, 97%, 53%);
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+}
+
+/* form {
+    width: 100%;
+} */
+
+@media screen and (max-width: 410px) {
+    .card {
+        width: 100%;
+        height: max-content;
+        padding: 2rem 1rem;
+        border-radius: 1rem;
+    }
+}
